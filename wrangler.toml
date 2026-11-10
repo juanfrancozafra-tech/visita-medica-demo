@@ -1,0 +1,29 @@
+name = "visita-medica-demo"
+compatibility_date = "2025-09-01"
+pages_build_output_dir = "public"
+
+[vars]
+# Versión de portafolio: datos ficticios que se reinician cada día y respuestas de IA simuladas.
+# Con DEMO_MODE = "0" la app usa la API de Claude (ANTHROPIC_API_KEY) y Whisper (binding AI), como la versión real.
+DEMO_MODE = "1"
+# PIN público de la demo (en la versión real es un secreto de Cloudflare, nunca va en el código).
+APP_PIN = "1234"
+# Modelo de Claude cuando DEMO_MODE = "0".
+CLAUDE_MODEL = "claude-haiku-5-5"
+# Módulo de visitas (en la demo siempre está encendido).
+VISITAS_ON = "1"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "visita-demo-db"
+# Pega aquí el Database ID de la base que crees en Cloudflare (ver README).
+database_id = "c1609416-f615-4b8c-9a28-937cafd878e3"
+
+[[r2_buckets]]
+binding = "FILES"
+bucket_name = "visita-demo-soportes"
+
+# Dictado real con Whisper (Workers AI). En la demo no se usa: está comentado para que `npm run dev`
+# funcione sin iniciar sesión en Cloudflare. Para la versión real, quita los # de las dos líneas.
+# [ai]
+# binding = "AI"

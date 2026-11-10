@@ -1,0 +1,10 @@
+node_modules/
+.wrangler/
+.dev.vars
+.DS_Store
+
+# Panel y farmacias propios (CSV): no van a git. Solo los *.ejemplo.csv.
+data/*.csv
+!data/*.ejemplo.csv
+data/.carga.sql
+.test-seed.sql

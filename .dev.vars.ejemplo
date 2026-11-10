@@ -1,0 +1,6 @@
+# Copia este archivo como .dev.vars para correr en local (npm run dev).
+# Las pruebas (npm test) esperan la base vacía y el modo demo apagado:
+DEMO_MODE=0
+APP_PIN=1234
+VISITAS_ON=1
+# ANTHROPIC_API_KEY=sk-ant-...   (solo si quieres probar la IA real con DEMO_MODE=0)

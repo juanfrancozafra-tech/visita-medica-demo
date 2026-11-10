@@ -1,0 +1,14 @@
+{
+  "name": "visita-medica-demo",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler pages dev --port 8788",
+    "dev:demo": "wrangler pages dev --port 8789 --binding DEMO_MODE=1 --persist-to .wrangler/demo",
+    "test": "node test/fechas.test.mjs && node test/marcas.test.mjs && node test/visitas.test.mjs && node test/api.test.mjs",
+    "test:demo": "node test/demo.test.mjs",
+    "cargar": "node scripts/cargar.mjs",
+    "vendor": "cp node_modules/pdf-lib/dist/pdf-lib.min.js public/vendor/pdf-lib.min.js"
+  },
+  "devDependencies": { "wrangler": "^4.151.0", "pdf-lib": "^1.17.1" }
+}
