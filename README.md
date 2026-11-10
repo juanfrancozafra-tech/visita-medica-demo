@@ -4,6 +4,7 @@
 
 > Versión de portafolio de una app que está en uso real. Los datos, el laboratorio, las marcas y las personas son ficticios.
 > Demo en vivo: **https://visita-medica-demo.pages.dev** · PIN **1234** (se reinicia cada día).
+> Documento de producto completo (PRD): **[docs/PRD.md](docs/PRD.md)** — problema, métricas, reglas, decisiones, IA (modelos, guardrails, evals), arquitectura, seguridad y modelo de datos.
 
 <p align="center">
   <img src="docs/capturas/movil-semana.png" width="240" alt="Semana de visitas">
@@ -72,6 +73,9 @@ Navegador ──► Cloudflare Pages (public/)
 - **IA simulada**: la lectura de facturas devuelve una factura de ejemplo, el dictado una nota de ejemplo y el ajuste del texto se hace con reglas locales. Así la demo no tiene costo ni usa llaves. Con `DEMO_MODE = "0"` se usa la IA real.
 - Archivos de máximo 3 MB; se borran al reiniciar.
 - La versión en uso real es privada; esta comparte el mismo código, solo cambian los datos y el modo demo (`lib/demo.js`).
+
+### Más detalle
+El [PRD](docs/PRD.md) explica requisitos, reglas de negocio, decisiones, el uso de IA (modelos, guardrails y evals), infraestructura, seguridad y modelo de datos.
 
 ### Correr en local
 ```bash
@@ -146,6 +150,9 @@ Cloudflare Pages (vanilla HTML, CSS and JavaScript) · Pages Functions (API) · 
 - Files up to 3 MB; deleted on reset.
 - The production version is private; this one shares the same code, only the data and demo mode (`lib/demo.js`) differ.
 - The app's interface is in Spanish (Colombia), as used in production.
+
+### More detail
+The full product document ([PRD](docs/PRD.md), in Spanish) covers requirements, business rules, decisions, AI (models, guardrails, evals), infrastructure, security and the data model.
 
 ### Run locally
 See the commands in [Correr en local](#correr-en-local). Deploying to Cloudflare: [docs/PUBLICAR.md](docs/PUBLICAR.md) (Spanish).
